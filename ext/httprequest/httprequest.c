@@ -190,7 +190,7 @@ PHP_METHOD(HttpRequest,__construct)
 }
 
 /**
- * 实现代理模式
+ * 实现单例模式
  */
 PHP_METHOD(HttpRequest,current)
 {
