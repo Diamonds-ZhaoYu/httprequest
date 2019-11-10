@@ -1,0 +1,13 @@
+// $Id$
+// vim:ft=javascript
+
+// If your extension references something external, use ARG_WITH
+// ARG_WITH("httprequest", "for httprequest support", "no");
+
+// Otherwise, use ARG_ENABLE
+ARG_ENABLE("httprequest", "enable httprequest support", "no");
+
+if (PHP_HTTPREQUEST != "no") {
+	EXTENSION("httprequest", "httprequest.c", PHP_EXTNAME_SHARED, "/DZEND_ENABLE_STATIC_TSRMLS_CACHE=1");
+}
+
